@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage>
   Future<void> fetchSummaryData() async {
     try {
       final res = await http.get(
-        Uri.parse('http://10.78.11.84:8000/api/dashboard/info'),
+        Uri.parse('http://192.168.1.2:8000/api/dashboard/info'),
       );
 
       if (res.statusCode == 200) {
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage>
   Future<void> fetchHotelData() async {
     try {
       final response = await http.get(
-        Uri.parse('http://10.78.11.84:8000/api/about-hss/hss'),
+        Uri.parse('http://192.168.1.2:8000/api/about-hss/hss'),
       );
 
       if (response.statusCode == 200) {

@@ -109,7 +109,7 @@ class _SignInScreenState extends State<SignInScreen>
     String? token = prefs.getString('token');
     if (token != null) {
       final response = await http.get(
-        Uri.parse('http://10.78.11.84:8000/api/profile'),
+        Uri.parse('http://192.168.1.2:8000/api/profile'),
         headers: {'Authorization': 'Bearer $token'},
       );
       if (response.statusCode == 200) {
@@ -124,7 +124,7 @@ class _SignInScreenState extends State<SignInScreen>
   Future<void> loginUser() async {
     setState(() => _loading = true);
     try {
-      final url = Uri.parse('http://10.78.11.84:8000/api/login');
+      final url = Uri.parse('http://192.168.1.2:8000/api/login');
       final response = await http.post(
         url,
         body: {

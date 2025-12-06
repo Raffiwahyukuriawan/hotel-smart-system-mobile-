@@ -70,7 +70,7 @@ class _SignUpScreenState extends State<SignUpScreen>
 
   setState(() => _loading = true);
 
-  final url = Uri.parse('http://10.78.11.84:8000/api/register');
+  final url = Uri.parse('http://10.61.138.179:8000/api/register');
   try {
     final response = await http.post(
       url,

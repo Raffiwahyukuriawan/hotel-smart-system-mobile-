@@ -105,7 +105,7 @@ class _CartPageState extends State<CartPage> {
   Future<void> updateJumlahPesanan(FoodItem item) async {
     try {
       final response = await http.put(
-        Uri.parse("http://10.78.11.84:8000/api/pesanan/${item.id}"),
+        Uri.parse("http://10.61.138.179:8000/api/pesanan/${item.id}"),
         headers: {"Content-Type": "application/json"},
         body: jsonEncode({"jumlah_dipesan": item.quantity}),
       );
@@ -162,7 +162,7 @@ class _CartPageState extends State<CartPage> {
         final tamuId = prefs.getInt('tamu_id');
 
         final response = await http.post(
-          Uri.parse("http://10.78.11.84:8000/api/riwayat-pesanan/store"),
+          Uri.parse("http://10.61.138.179:8000/api/riwayat-pesanan/store"),
           headers: {"Content-Type": "application/json"},
           body: jsonEncode({
             "nama_tamu_id": namaTamuId,

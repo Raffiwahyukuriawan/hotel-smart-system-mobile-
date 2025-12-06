@@ -34,10 +34,10 @@ class _HistoryPageState extends State<HistoryPage> {
 
     try {
       final resKamar = await http.get(
-        Uri.parse('http://10.78.11.84:8000/api/riwayat/kamar/$tamuId'),
+        Uri.parse('http://10.61.138.179:8000/api/riwayat/kamar/$tamuId'),
       );
       final resMenu = await http.get(
-        Uri.parse('http://10.78.11.84:8000/api/riwayat/makanan-minuman/$tamuId'),
+        Uri.parse('http://10.61.138.179:8000/api/riwayat/makanan-minuman/$tamuId'),
       );
 
       if (resKamar.statusCode == 200 && resMenu.statusCode == 200) {

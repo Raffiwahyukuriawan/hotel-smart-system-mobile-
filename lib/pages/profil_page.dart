@@ -45,7 +45,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
     try {
       final response = await http.get(
-        Uri.parse('http://10.78.11.84:8000/api/profil/$userId'),
+        Uri.parse('http://10.61.138.179:8000/api/profil/$userId'),
       );
 
       if (response.statusCode == 200) {

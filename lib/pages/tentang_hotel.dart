@@ -21,7 +21,7 @@ class _InfoHotelPageState extends State<InfoHotelPage> {
   // 🔹 Fetch data dari API
   Future<void> fetchHotelInfo() async {
     final response = await http.get(
-      Uri.parse("http://10.78.11.84:8000/api/about-hss"),
+      Uri.parse("http://10.61.138.179:8000/api/about-hss"),
     );
 
     if (response.statusCode == 200) {

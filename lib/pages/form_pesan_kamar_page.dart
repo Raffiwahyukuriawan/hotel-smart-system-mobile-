@@ -292,7 +292,7 @@ class FormPesanKamarPage extends StatelessWidget {
               String? token = prefs.getString('token');
 
               final response = await http.post(
-                Uri.parse("http://10.78.11.84:8000/api/booking"),
+                Uri.parse("http://10.61.138.179:8000/api/booking"),
                 headers: {
                   "Content-Type": "application/json",
                   "Authorization":

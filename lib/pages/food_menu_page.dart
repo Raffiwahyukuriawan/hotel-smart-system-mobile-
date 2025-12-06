@@ -68,7 +68,7 @@ class _FoodMenuPageState extends State<FoodMenuPage> {
   Future<void> fetchMenu() async {
     try {
       final response = await http.get(
-        Uri.parse("http://10.78.11.84:8000/api/makanan-minuman"),
+        Uri.parse("http://10.61.138.179:8000/api/makanan-minuman"),
       );
 
       if (response.statusCode == 200) {
@@ -105,7 +105,7 @@ class _FoodMenuPageState extends State<FoodMenuPage> {
   Future<void> fetchMejas() async {
     try {
       final response = await http.get(
-        Uri.parse("http://10.78.11.84:8000/api/mejas"), // endpoint Laravel
+        Uri.parse("http://10.61.138.179:8000/api/mejas"), // endpoint Laravel
       );
 
       if (response.statusCode == 200) {
@@ -158,7 +158,7 @@ class _FoodMenuPageState extends State<FoodMenuPage> {
     // Kirim ke API Laravel
     try {
       final response = await http.post(
-        Uri.parse('http://10.78.11.84:8000/api/temp-makanan-minuman'),
+        Uri.parse('http://10.61.138.179:8000/api/temp-makanan-minuman'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'makanan_minuman_id': item.id,
@@ -385,7 +385,7 @@ class _FoodMenuPageState extends State<FoodMenuPage> {
                                       try {
                                         final response = await http.put(
                                           Uri.parse(
-                                            "http://10.78.11.84:8000/api/mejas/$value/status",
+                                            "http://10.61.138.179:8000/api/mejas/$value/status",
                                           ),
                                           headers: {
                                             "Content-Type": "application/json",

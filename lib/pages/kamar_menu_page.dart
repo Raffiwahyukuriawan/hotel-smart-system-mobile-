@@ -29,7 +29,7 @@ class _BookingPageState extends State<BookingPage> {
   Future<void> fetchKamar() async {
     try {
       final response = await http.get(
-        Uri.parse("http://10.78.11.84:8000/api/kamars"),
+        Uri.parse("http://10.61.138.179:8000/api/kamars"),
       ); // ganti sesuai URL API Laravel
 
       if (response.statusCode == 200) {

@@ -61,7 +61,7 @@ class _EditProfilPageState extends State<EditProfilPage> {
     }
 
     // URL API Laravel
-    final url = Uri.parse('http://10.78.11.84:8000/api/tamu/update/$userId');
+    final url = Uri.parse('http://10.61.138.179:8000/api/tamu/update/$userId');
 
     final body = {
       'nama_tamu': _namaController.text,
